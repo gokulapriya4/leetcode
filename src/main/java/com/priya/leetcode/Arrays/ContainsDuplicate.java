@@ -1,4 +1,4 @@
-package main.java.com.priya.leetcode;
+package main.java.com.priya.leetcode.Arrays;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
