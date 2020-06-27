@@ -2,7 +2,7 @@ package main.java.com.priya.leetcode;
 
 import java.util.*;
 
-public class WissenTechInterviewProblem {
+public class PlayerStatisticsWissenTechInterviewProblem {
     public static class PlayerDetail {
         String name;
         int innings;

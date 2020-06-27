@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-public class MinimumParkingSpace {
+public class MinimumParkingSpaceWissenTechInterview {
 
     static int minParkingSpaces(int[][] parkingStartEndTimes) {
         parkingStartEndTimes = sortByFirstColumn(parkingStartEndTimes);
@@ -34,7 +34,7 @@ public class MinimumParkingSpace {
     }
 
     static int[][] sortByFirstColumn(int[][] arr) {
-        Arrays.sort(arr, (entry1, entry2) -> {
+         Arrays.sort(arr, (entry1, entry2) -> {
             if (entry1[0] > entry2[0])
                 return 1;
             else
@@ -43,7 +43,6 @@ public class MinimumParkingSpace {
         return arr;
     }
 
-    // DO NOT MODIFY ANYTHING BELOW THIS LINE!!
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
