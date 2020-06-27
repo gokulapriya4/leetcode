@@ -9,9 +9,10 @@ import java.util.Arrays;
 public class MinimumParkingSpaceWissenTechInterview {
 
     static int minParkingSpaces(int[][] parkingStartEndTimes) {
-        parkingStartEndTimes = sortByFirstColumn(parkingStartEndTimes);
+        sortByFirstColumn(parkingStartEndTimes);
+
         int minCount = 0, nextVal = 0;
-        while (isAllElementsVisited(parkingStartEndTimes)) {
+        while (!isAllElementsVisited(parkingStartEndTimes)) {
             for (int i = 0; i < parkingStartEndTimes.length; i++) {
                 if (parkingStartEndTimes[i][0] != -1 && parkingStartEndTimes[i][0] >= nextVal) {
                     parkingStartEndTimes[i][0] = -1;
@@ -19,7 +20,7 @@ public class MinimumParkingSpaceWissenTechInterview {
                 }
             }
             minCount++;
-            nextVal =0;
+            nextVal = 0;
         }
         return minCount;
     }
@@ -34,7 +35,7 @@ public class MinimumParkingSpaceWissenTechInterview {
     }
 
     static int[][] sortByFirstColumn(int[][] arr) {
-         Arrays.sort(arr, (entry1, entry2) -> {
+        Arrays.sort(arr, (entry1, entry2) -> {
             if (entry1[0] > entry2[0])
                 return 1;
             else
