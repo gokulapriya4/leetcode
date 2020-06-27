@@ -1,4 +1,4 @@
-package main.java.com.priya.leetcode;
+package main.java.com.priya.leetcode.Interview;
 
 import java.util.*;
 
