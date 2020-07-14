@@ -2,6 +2,7 @@ package main.java.com.priya.leetcode.Math;
 
 //https://leetcode.com/explore/interview/card/top-interview-questions-easy/102/math/745/
 public class PowerOfThree {
+
     public static boolean isPowerOfThree(int n) {
         return true;
     }
