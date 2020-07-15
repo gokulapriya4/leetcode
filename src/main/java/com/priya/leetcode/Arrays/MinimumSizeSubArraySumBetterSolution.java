@@ -4,6 +4,7 @@ package main.java.com.priya.leetcode.Arrays;
 public class MinimumSizeSubArraySumBetterSolution {
 
     public int minSubArrayLen(int s, int[] nums) {
+        return 1;
     }
 
     public static void main(String[] args) {
