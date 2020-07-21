@@ -11,27 +11,36 @@ class RemoveDuplicatesFromSortedArray {
             boolean isDuplicate = false;
 
             for (int j = 0; j < i; j++) {
-                if(nums[j] == nums[i]) {
+                if (nums[j] == nums[i]) {
                     isDuplicate = true;
                 }
             }
 
-            if(!isDuplicate) {
+            if (!isDuplicate) {
                 nums[currentIndexToPlace] = nums[i];
                 currentIndexToPlace++;
             }
         }
 
-        for (int i = 0; i < currentIndexToPlace; i++) {
-            System.out.println(nums[i]);
-        }
         return currentIndexToPlace;
+    }
+
+    public int removeDuplicatesRevisitOne(int[] nums) {
+        int index = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] != nums[index]) {
+                index++;
+                nums[index] = nums[i];
+            }
+        }
+        return index + 1;
     }
 
     public static void main(String[] args) {
         RemoveDuplicatesFromSortedArray obj = new RemoveDuplicatesFromSortedArray();
-        int[] nums = {1, 1, 2};
-        System.out.println("Fianl Result: " + obj.removeDuplicates(nums));
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        //System.out.println("Fianl Result: " + obj.removeDuplicates(nums));
+        System.out.println("Fianl Result: " + obj.removeDuplicatesRevisitOne(nums));
     }
 
 }
