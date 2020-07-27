@@ -4,10 +4,16 @@ package main.java.com.priya.leetcode.DynamicProgramming;
 public class MaximumSubArray {
 
     public int maxSubArray(int[] nums) {
-        int maxSum = 0, sumSoFar = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i] + sumSoFar > maxSum) {
-                maxSum = nums[i]+ sumSoFar;
+        int maxSum = nums[0], sumSoFar = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            if(nums[i] > sumSoFar + nums[i]) {
+                sumSoFar = nums[i];
+            } else {
+                sumSoFar = sumSoFar + nums[i];
+            }
+            if(sumSoFar > maxSum) {
+                maxSum =  sumSoFar;
             }
         }
         return maxSum;
